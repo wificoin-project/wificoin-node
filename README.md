@@ -6,8 +6,10 @@ A Wificoin full node for building applications and services with Node.js. A node
 ## Install
 
 ```bash
+git clone https://github.com/KunTengRom/wificoin-node.git
+cd wificoin-node
 npm install wificoin-node
-wificoin-node start
+./bin/wificoin-node start
 ```
 
 Note: For your convenience, we distribute wificoind binaries for x86_64 Linux and x86_64 Mac OS X. 
