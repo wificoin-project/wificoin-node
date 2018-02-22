@@ -1,0 +1,23 @@
+{
+  "network": "livenet",
+  "port": 3001,
+  "services": [
+    "wificoind",
+    "insight-api",
+    "insight-ui",
+    "web"
+  ],
+  "servicesConfig": {
+    "wificoind": {
+      "connect": [
+        {
+          "rpchost": "127.0.0.1",
+          "rpcport": 8665,
+          "rpcuser": "bitcoin",
+          "rpcpassword": "local321",
+          "zmqpubrawtx": "tcp://127.0.0.1:28665"
+        }
+      ]
+    }
+  }
+}

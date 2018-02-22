@@ -1,0 +1,85 @@
+{
+  "_from": "insight-ui",
+  "_id": "insight-ui@0.4.0",
+  "_inBundle": false,
+  "_integrity": "sha1-ie2KjzNlzWjz2UqB/+WW9ORvL44=",
+  "_location": "/insight-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "insight-ui",
+    "name": "insight-ui",
+    "escapedName": "insight-ui",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/insight-ui/-/insight-ui-0.4.0.tgz",
+  "_shasum": "89ed8a8f3365cd68f3d94a81ffe596f4e46f2f8e",
+  "_spec": "insight-ui",
+  "_where": "/home/zhangzf/bitcoin/bitcore-node",
+  "bitcoreNode": "bitcore-node",
+  "bugs": {
+    "url": "https://github.com/bitpay/insight-ui/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Matias Alejo Garcia",
+      "email": "ematiu@gmail.com"
+    },
+    {
+      "name": "Manuel Araoz",
+      "email": "manuelaraoz@gmail.com"
+    },
+    {
+      "name": "Mario Colque",
+      "email": "colquemario@gmail.com"
+    },
+    {
+      "name": "Gustavo Cortez",
+      "email": "cmgustavo83@gmail.com"
+    },
+    {
+      "name": "Juan Ignacio Sosa Lopez",
+      "email": "bechilandia@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "deprecated": false,
+  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the bitcoin network and build your own services with it.",
+  "devDependencies": {
+    "bower": "~1.2.8",
+    "grunt": "~0.4.2",
+    "grunt-angular-gettext": "^0.2.15",
+    "grunt-cli": "~0.1.11",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-watch": "*",
+    "grunt-css": "~0.5.4",
+    "grunt-macreload": "*",
+    "grunt-markdown": "~0.5.0"
+  },
+  "homepage": "https://github.com/bitpay/insight-ui",
+  "keywords": [
+    "insight",
+    "blockchain",
+    "blockexplorer",
+    "bitcoin",
+    "bitcore",
+    "front-end"
+  ],
+  "license": "MIT",
+  "name": "insight-ui",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bitpay/insight-ui.git"
+  },
+  "version": "0.4.0"
+}

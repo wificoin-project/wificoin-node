@@ -1,0 +1,57 @@
+{
+  "name": "wificoin-node",
+  "description": "Full node with extended capabilities using Wificoind",
+  "author": "BitPay <dev@bitpay.com>",
+  "version": "3.1.3",
+  "main": "./index.js",
+  "repository": "git://github.com/KunTengRom/wificoin-node.git",
+  "contributors": [
+    {
+      "name": "Christopher Jeffrey"
+    },
+    {
+      "name": "Braydon Fuller",
+      "email": "braydon@bitpay.com"
+    },
+    {
+      "name": "Chris Kleeschulte",
+      "email": "chrisk@bitpay.com"
+    },
+    {
+      "name": "Patrick Nagurny",
+      "email": "patrick@bitpay.com"
+    }
+  ],
+  "scripts": {
+    "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
+    "coverage": "istanbul cover _mocha -- --recursive",
+    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "tags": [
+    "bitcoin"
+  ],
+  "dependencies": {
+    "async": "^1.3.0",
+    "wificoin-lib": "git://github.com/KunTengRom/wificoin-lib.git",
+    "insight-api": "./lib/insight/insight-api",
+    "insight-ui": "./lib/insight/insight-ui",
+    "body-parser": "^1.13.3",
+    "colors": "^1.1.2",
+    "commander": "^2.8.1",
+    "errno": "^0.1.4",
+    "express": "^4.13.3",
+    "liftoff": "^2.2.0",
+    "lru-cache": "^4.0.1",
+    "mkdirp": "0.5.0",
+    "path-is-absolute": "^1.0.0",
+    "semver": "^5.0.1",
+    "socket.io": "^1.4.5",
+    "socket.io-client": "^1.4.5",
+    "zmq": "^2.14.0"
+  },
+  "optionalDependencies": {
+    "bufferutil": "~1.2.1",
+    "utf-8-validate": "~1.2.1"
+  },
+  "license": "MIT"
+}
