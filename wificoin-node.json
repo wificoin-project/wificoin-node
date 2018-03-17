@@ -1,6 +1,11 @@
 {
   "network": "livenet",
   "port": 3001,
+  "https": true,
+  "httpsOptions": {
+    "key": "/opt/wificoin/cert/wfc.kunteng.org.key",
+    "cert": "/opt/wificoin/cert/wfc.kunteng.org.pem"
+  },
   "services": [
     "wificoind",
     "insight-api",
@@ -8,16 +13,17 @@
     "web"
   ],
   "servicesConfig": {
+    "web": {
+	  "jsonRequestLimit": "2000kb"
+	},
+    "insight-api": {
+	  "disableRateLimiter": true
+	},
     "wificoind": {
-      "connect": [
-        {
-          "rpchost": "127.0.0.1",
-          "rpcport": 8665,
-          "rpcuser": "bitcoin",
-          "rpcpassword": "local321",
-          "zmqpubrawtx": "tcp://127.0.0.1:28665"
-        }
-      ]
+  	  "spawn": {
+             "datadir": "/opt/wificoin/wificoin-data",
+             "exec": "/opt/wificoin/wificoind/src/wificoind"
+      }
     }
   }
 }
