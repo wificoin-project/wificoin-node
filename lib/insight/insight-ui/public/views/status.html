@@ -33,11 +33,11 @@
           </tr>
           <tr>
             <td translate>Start Date</td>
-            <td class="text-right"><time title="{{sync.startTs | date:'medium'}}">{{humanSince(sync.startTs)}}</time></td>
+            <td class="text-right"><time title="{{sync.startTs | date:'yyyy-MM-dd HH:mm:ss'}}">{{humanSince(sync.startTs)}}</time></td>
           </tr>
           <tr data-ng-show="sync.endTs">
             <td translate>Finish Date</td>
-            <td class="text-right"><time title="{{sync.startTs | date:'medium'}}" >{{humanSince(sync.endTs)}}</time></td>
+            <td class="text-right"><time title="{{sync.startTs | date:'yyyy-MM-dd HH:mm:ss'}}" >{{humanSince(sync.endTs)}}</time></td>
           </tr>
           <tr>
             <td translate>Initial Block Chain Height</td>
