@@ -721,7 +721,7 @@ a.v_highlight_more {
   margin-top: 15px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .status {
     display: none;
   } 
