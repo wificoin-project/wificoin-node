@@ -10,7 +10,7 @@
         </div>
       </div>
       <p class="lead text-center m20v">
-      {{pagination.current}} UTC
+      {{pagination.current}} 
       <a href="#" class="btn btn-primary btn-xs" datepicker-popup show-button-bar="false" data-ng-click="openCalendar($event)" data-ng-model="dt" is-open="opened" data-ng-required="true"><span class="glyphicon glyphicon-calendar"></span></a>
       </p>
       <div class="m20v text-center text-muted" data-ng-if="!pagination.current">
@@ -58,8 +58,8 @@
         </tbody>
       </table>
       <div data-ng-if="pagination.more">
-        <a class="btn btn-primary" href="blocks-date/{{pagination.current}}/{{pagination.prevTs}}" data-ng-show="{{before}}">Lastest block from date</a>
-        <a class="btn btn-primary" href="blocks-date/{{pagination.current}}/{{pagination.moreTs}}">Older blocks from this date</a>
+        <a class="btn btn-primary" href="blocks-date/{{pagination.current}}/{{pagination.prevTs}}" data-ng-show="{{before}}" translate>Lastest block from date</a>
+        <a class="btn btn-primary" href="blocks-date/{{pagination.current}}/{{pagination.moreTs}}" translate>Older blocks from this date</a>
       </div>
     </div>
   </div>

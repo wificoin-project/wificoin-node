@@ -20,10 +20,15 @@
 	  "disableRateLimiter": true
 	},
     "wificoind": {
-  	  "spawn": {
-             "datadir": "/opt/wificoin/wificoin-data",
-             "exec": "/opt/wificoin/wificoind/src/wificoind"
-      }
+      "connect": [
+        {
+          "rpchost": "127.0.0.1",
+          "rpcport": 9665,
+          "rpcuser": "test",
+          "rpcpassword": "test",
+          "zmqpubrawtx": "tcp://127.0.0.1:28665"
+        }
+      ]
     }
   }
 }

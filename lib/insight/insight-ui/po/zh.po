@@ -1,0 +1,616 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Vis Virial <visvirial@gmail.com>\n"
+"Language-Team: \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: public/views/transaction/tx.html
+msgid "(Input unconfirmed)"
+msgstr "(输入未确认)"
+
+#: public/views/404.html
+msgid "404 Page not found :("
+msgstr "404 请求的页面不存在或已被删除 (´・ω・`)"
+
+#: public/views/index.html
+msgid "About"
+msgstr "关于"
+
+#: public/views/address.html public/views/messages_verify.html
+msgid "Address"
+msgstr "地址"
+
+#: public/views/index.html
+msgid "Age"
+msgstr "时间"
+
+#: public/views/messages_verify.html
+msgid "An error occured in the verification process."
+msgstr "An error occured in the verification process."
+
+#: public/views/transaction_sendraw.html
+msgid "An error occured:<br>{{error}}"
+msgstr "发生错误：<br>{{error}}"
+
+#: public/views/status.html
+msgid "Application Status"
+msgstr "当前状态"
+
+#: public/views/status.html
+msgid "Best Block"
+msgstr "最优块"
+
+#: public/views/messages_verify.html
+msgid "Wificoin comes with a way of signing arbitrary messages."
+msgstr "比特币有一种签名任意消息的方式。"
+
+#: public/views/status.html
+msgid "Wificoind node information"
+msgstr "节点信息"
+
+#: public/views/status.html
+msgid "Network"
+msgstr "网络"
+
+#: public/views/block.html
+msgid "Block"
+msgstr "区块"
+
+#: public/views/block.html
+msgid "Block Reward"
+msgstr "新块奖励"
+
+#: public/views/block_list.html public/views/dummy-translations.html
+#: public/views/status.html
+msgid "Blocks"
+msgstr "区块"
+
+#: public/views/block_list.html
+msgid "Lastest block from date"
+msgstr "返回"
+
+#: public/views/block_list.html
+msgid "Older blocks from this date"
+msgstr "下一页>>"
+
+#: public/views/transaction_sendraw.html
+msgid "Broadcast Raw Transaction"
+msgstr "广播原始交易"
+
+#: public/views/status.html
+msgid "Bytes Serialized"
+msgstr "序列化后的容量（字节）"
+
+#: public/views/includes/connection.html
+msgid ""
+"Can't connect to bitcoind to get live updates from the p2p network. (Tried "
+"connecting to bitcoind at {{host}}:{{port}} and failed.)"
+msgstr ""
+"无法连接到wificoin的P2P网络获取实时信息"
+"试图连接到{{host}}：{{port}}，但失败了"
+
+#: public/views/includes/connection.html
+msgid "Can't connect to insight server. Attempting to reconnect..."
+msgstr "无法连接到insight服务器。尝试重新连接...."
+
+#: public/views/includes/connection.html
+msgid "Can't connect to internet. Please, check your connection."
+msgstr "无法连接到互联网。请检查连接。"
+
+#: public/views/status.html
+msgid "Complete"
+msgstr "完成"
+
+#: public/views/transaction.html public/views/transaction/tx.html
+msgid "Confirmations"
+msgstr "确认"
+
+#: public/views/includes/header.html
+msgid "Conn"
+msgstr "连接数"
+
+#: public/views/status.html
+msgid "Connections to other nodes"
+msgstr "连接节点"
+
+#: public/views/status.html
+msgid "Current Blockchain Tip (insight)"
+msgstr "当前区块链"
+
+#: public/views/status.html
+msgid "Current Sync Status"
+msgstr "当前状态"
+
+#: public/views/transaction.html
+msgid "Details"
+msgstr "详细信息"
+
+#: public/views/block.html
+msgid "Difficulty"
+msgstr "难度"
+
+#: public/views/transaction/tx.html
+msgid "Double spent attempt detected. From tx:"
+msgstr "检测到这笔交易存在双花攻击："
+
+#: public/views/messages_verify.html
+msgid "Error message:"
+msgstr "Error message:"
+
+#: public/views/includes/connection.html
+msgid "Error!"
+msgstr "错误！"
+
+#: public/views/transaction/tx.html
+msgid "Fee"
+msgstr "交易费"
+
+#: public/views/address.html
+msgid "Final Balance"
+msgstr "最终余额"
+
+#: public/views/status.html
+msgid "Finish Date"
+msgstr "完成时间"
+
+#: public/views/404.html
+msgid "Go to home"
+msgstr "返回首页"
+
+#: public/views/status.html
+msgid "Hash Serialized"
+msgstr "哈希序列化"
+
+#: public/views/block.html public/views/block_list.html
+#: public/views/index.html public/views/status.html
+#: public/views/includes/header.html
+msgid "Height"
+msgstr "区块高度"
+
+#: public/views/transaction.html public/views/transaction/tx.html
+msgid "Included in Block"
+msgstr "收录区块"
+
+#: public/views/transaction/tx.html
+msgid "Incoherence in levelDB detected:"
+msgstr "检测到不一致的levelDB:"
+
+#: public/views/status.html
+msgid "Info Errors"
+msgstr "错误信息"
+
+#: public/views/status.html
+msgid "Initial Block Chain Height"
+msgstr "区块数量"
+
+#: public/views/transaction.html
+msgid "Input"
+msgstr "输入"
+
+#: public/views/status.html
+msgid "Last Block"
+msgstr "最新区块"
+
+#: public/views/status.html
+msgid "Last Block Hash (Wificoind)"
+msgstr "哈希值"
+
+#: public/views/index.html
+msgid "Latest Blocks"
+msgstr "最新区块"
+
+#: public/views/index.html
+msgid "Latest Transactions"
+msgstr "最新交易"
+
+#: public/views/address.html
+msgid "Loading Address Information"
+msgstr "正在加载地址信息"
+
+#: public/views/block.html
+msgid "Loading Block Information"
+msgstr "正在加载区块信息"
+
+#: public/views/block_list.html
+msgid "Loading Selected Date..."
+msgstr "正在加载所选日期的数据..."
+
+#: public/views/transaction.html
+msgid "Loading Transaction Details"
+msgstr "正在加载交易详细信息"
+
+#: public/views/transaction/list.html
+msgid "Loading Transactions..."
+msgstr "正在加载交易信息..."
+
+#: public/views/messages_verify.html public/views/transaction_sendraw.html
+#: public/views/includes/infoStatus.html
+msgid "Loading..."
+msgstr "载入中..."
+
+#: public/views/messages_verify.html
+msgid "Message"
+msgstr "Message"
+
+#: public/views/transaction.html
+msgid "Mined Time"
+msgstr "确认时间"
+
+#: public/views/block.html public/views/block_list.html
+#: public/views/index.html
+msgid "Mined by"
+msgstr "来自"
+
+#: public/views/status.html
+msgid "Mining Difficulty"
+msgstr "难度"
+
+#: public/views/block.html
+msgid "Next Block"
+msgstr "下一个块"
+
+#: public/views/transaction/tx.html
+msgid "No Inputs (Newly Generated Coins)"
+msgstr "没有输入 (新生成的资金)"
+
+#: public/views/block_list.html
+msgid "No blocks yet."
+msgstr "未找到区块"
+
+#: public/views/includes/search.html
+msgid "No matching records found!"
+msgstr "未找到匹配的记录！"
+
+#: public/views/address.html
+msgid "No. Transactions"
+msgstr "总交易数量"
+
+#: public/views/block.html
+msgid "Number Of Transactions"
+msgstr "交易数量"
+
+#: public/views/transaction.html
+msgid "Output"
+msgstr "输出"
+
+#: public/views/index.html
+msgid "Powered by"
+msgstr "技术支持"
+
+#: public/views/block.html
+msgid "Previous Block"
+msgstr "上一个块"
+
+#: public/views/status.html
+msgid "Protocol version"
+msgstr "协议版本"
+
+#: public/views/status.html
+msgid "Proxy setting"
+msgstr "代理设置"
+
+#: public/views/transaction_sendraw.html
+msgid "Raw transaction data"
+msgstr "原始交易数据"
+
+#: public/views/transaction_sendraw.html
+msgid "Raw transaction data must be a valid hexadecimal string."
+msgstr "原始交易数据必须是一个有效的16进制字符串"
+
+#: public/views/transaction.html
+msgid "Received Time"
+msgstr "接收时间"
+
+#: public/views/redirect.html
+msgid "Redirecting..."
+msgstr "跳转到..."
+
+#: public/views/includes/search.html
+msgid "Search for block, transaction or address"
+msgstr "搜索区块, 交易, 或钱包地址"
+
+#: public/views/index.html
+msgid "See all blocks"
+msgstr "查看所有块"
+
+#: public/views/transaction_sendraw.html
+msgid "Send transaction"
+msgstr "发送交易"
+
+#: public/views/status.html
+msgid "Show Transaction Output data"
+msgstr "查看交易输出数据"
+
+#: public/views/transaction/tx.html
+msgid "Show all"
+msgstr "查看全部"
+
+#: public/views/transaction/tx.html
+msgid "Show input"
+msgstr "查看输入"
+
+#: public/views/transaction/tx.html
+msgid "Show less"
+msgstr "隐藏"
+
+#: public/views/transaction/tx.html
+msgid "Show more"
+msgstr "查看更多"
+
+#: public/views/messages_verify.html
+msgid "Signature"
+msgstr "Signature"
+
+#: public/views/block_list.html public/views/index.html
+#: public/views/transaction.html
+msgid "Size"
+msgstr "大小"
+
+#: public/views/block.html
+msgid "Size (bytes)"
+msgstr "大小 (字节)"
+
+#: public/views/status.html
+msgid "Skipped Blocks (previously synced)"
+msgstr "跳过的块（同步）"
+
+#: public/views/status.html
+msgid "Start Date"
+msgstr "同步时间"
+
+#: public/views/dummy-translations.html
+msgid "Status"
+msgstr "状态"
+
+#: public/views/block.html public/views/transaction.html
+msgid "Summary"
+msgstr "概要"
+
+#: public/views/address.html
+msgid "Summary <small>confirmed</small>"
+msgstr "概要 <small>已确认</small>"
+
+#: public/views/status.html
+msgid "Sync Progress"
+msgstr "同步进度"
+
+#: public/views/status.html
+msgid "Sync Status"
+msgstr "同步状态"
+
+#: public/views/status.html
+msgid "Sync Type"
+msgstr "同步类型"
+
+#: public/views/status.html
+msgid "Synced Blocks"
+msgstr "同步数量"
+
+#: public/views/status.html
+msgid "Testnet"
+msgstr "测试网络"
+
+#: public/views/messages_verify.html
+msgid "The message failed to verify."
+msgstr "The message failed to verify."
+
+#: public/views/messages_verify.html
+msgid "The message is verifiably from {{verification.address}}."
+msgstr "The message is verifiably from {{verification.address}}."
+
+#: public/views/transaction/list.html
+msgid "There are no transactions involving this address."
+msgstr "没有涉及此地址的交易。"
+
+#: public/views/transaction_sendraw.html
+msgid ""
+"This form can be used to broadcast a raw transaction in hex format over\n"
+"        the Wificoin network."
+msgstr ""
+"This form can be used to broadcast a raw transaction in hex format over\n"
+"        the Wificoin network."
+
+#: public/views/messages_verify.html
+msgid ""
+"This form can be used to verify that a message comes from\n"
+"        a specific Wificoin address."
+msgstr ""
+"This form can be used to verify that a message comes from\n"
+"        a specific Wificoin address."
+
+#: public/views/status.html
+msgid "Time Offset"
+msgstr "时间偏移量"
+
+#: public/views/block.html public/views/block_list.html
+msgid "Timestamp"
+msgstr "出块时间"
+
+#: public/views/block_list.html
+msgid "Today"
+msgstr "今天"
+
+#: public/views/status.html
+msgid "Total Amount"
+msgstr "总数量"
+
+#: public/views/address.html
+msgid "Total Received"
+msgstr "收入金额"
+
+#: public/views/address.html
+msgid "Total Sent"
+msgstr "支出金额"
+
+#: public/views/transaction.html
+msgid "Transaction"
+msgstr "交易记录"
+
+#: public/views/status.html
+msgid "Transaction Output Set Information"
+msgstr "交易输出信息"
+
+#: public/views/status.html
+msgid "Transaction Outputs"
+msgstr "所有输出"
+
+#: public/views/transaction_sendraw.html
+msgid "Transaction succesfully broadcast.<br>Transaction id: {{txid}}"
+msgstr "Transaction succesfully broadcast.<br>Transaction id: {{txid}}"
+
+#: public/views/address.html public/views/block.html
+#: public/views/block_list.html public/views/index.html
+#: public/views/status.html
+msgid "Transactions"
+msgstr "交易"
+
+#: public/views/transaction/tx.html
+msgid "Type"
+msgstr "类型"
+
+#: public/views/address.html
+msgid "Unconfirmed"
+msgstr "未确认"
+
+#: public/views/transaction.html public/views/transaction/tx.html
+msgid "Unconfirmed Transaction!"
+msgstr "未确认的交易!"
+
+#: public/views/address.html
+msgid "Unconfirmed Txs Balance"
+msgstr "未确认的交易金额"
+
+#: public/views/index.html
+msgid "Value Out"
+msgstr "交易额"
+
+#: public/views/messages_verify.html
+msgid "Verify"
+msgstr "Verify"
+
+#: public/views/messages_verify.html
+msgid "Verify signed message"
+msgstr "Verify signed message"
+
+#: public/views/block.html public/views/status.html
+msgid "Version"
+msgstr "版本"
+
+#: public/views/block_list.html public/views/index.html
+msgid "Waiting for blocks..."
+msgstr "载入中..."
+
+#: public/views/index.html
+msgid "Waiting for transactions..."
+msgstr "载入中..."
+
+#: public/views/block_list.html
+msgid "by date."
+msgstr "按日期  "
+
+#: public/views/transaction/tx.html
+msgid "first seen at"
+msgstr "首次出现在"
+
+#: public/views/transaction/tx.html
+msgid "mined"
+msgstr "时间"
+
+#: public/views/block_list.html
+msgid "mined on:"
+msgstr "产生日期:"
+
+#: public/views/forbes.html
+msgid "Top 100 Richest WiFicoin Addresses"
+msgstr "前100名富豪排行榜"
+
+#: public/views/forbes.html
+msgid "by date.On"
+msgstr "时间截止至"
+
+#~ msgid "Forbes"
+#~ msgstr "富豪榜"
+
+#~ msgid "Balance"
+#~ msgstr "余额"
+
+#~ msgid "(Mainchain)"
+#~ msgstr "(主链)"
+
+#~ msgid "(Orphaned)"
+#~ msgstr "(隔离的块)"
+
+#~ msgid "Bits"
+#~ msgstr "Bits"
+
+#~ msgid "Block #{{block.height}}"
+#~ msgstr "区块 #{{block.height}}"
+
+#~ msgid "BlockHash"
+#~ msgstr "哈希值"
+
+#~ msgid "Blocks <br> mined on:"
+#~ msgstr "区块 <br> 产生在"
+
+#~ msgid "Coinbase"
+#~ msgstr "Coinbase"
+
+#~ msgid "Hash"
+#~ msgstr "哈希值"
+
+#~ msgid "LockTime"
+#~ msgstr "锁定时间"
+
+#~ msgid "Merkle Root"
+#~ msgstr "Merkle 根"
+
+#~ msgid "Nonce"
+#~ msgstr "Nonce"
+
+#~ msgid "Ooops!"
+#~ msgstr "噢！"
+
+#~ msgid "Output is spent"
+#~ msgstr "输出已使用"
+
+#~ msgid "Output is unspent"
+#~ msgstr "输出未使用"
+
+#~ msgid "Scan"
+#~ msgstr "扫一扫"
+
+#~ msgid "Show/Hide items details"
+#~ msgstr "显示或隐藏项目详情"
+
+#~ msgid "Waiting for blocks"
+#~ msgstr "载入中"
+
+#~ msgid "by date. {{detail}} {{before}}"
+#~ msgstr "按日期 {{detail}} {{before}}"
+
+#~ msgid "scriptSig"
+#~ msgstr "scriptSig"
+
+#~ msgid "{{tx.confirmations}} Confirmations"
+#~ msgstr "{{tx.confirmations}} 确认"
+
+#~ msgid "<span class=\"glyphicon glyphicon-warning-sign\"></span> (Orphaned)"
+#~ msgstr ""
+#~ "<span class=\"glyphicon glyphicon-warning-sign\"></span> (隔离的块)"
+
+#~ msgid ""
+#~ "<span class=\"glyphicon glyphicon-warning-sign\"></span> Incoherence in "
+#~ "levelDB detected: {{vin.dbError}}"
+#~ msgstr ""
+#~ "<span class=\"glyphicon glyphicon-warning-sign\"></span> Incoherence in "
+#~ "levelDB detected: {{vin.dbError}}"
+
+#~ msgid "Waiting for blocks <span class=\"loader-gif\"></span>"
+#~ msgstr "载入中 <span class=\"loader-gif\"></span>"
