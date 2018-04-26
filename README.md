@@ -8,7 +8,7 @@ A Wificoin full node for building applications and services with Node.js. A node
 ```bash
 git clone https://github.com/KunTengRom/wificoin-node.git
 cd wificoin-node
-npm install wificoin-node
+npm install
 node app.js start
 or
 pm2 --name "wificoin-node" start app.js -- start
