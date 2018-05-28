@@ -4,7 +4,7 @@
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.1.3",
   "main": "./index.js",
-  "repository": "git://github.com/KunTengRom/wificoin-node.git",
+  "repository": "git://github.com/wificoin-project/wificoin-node.git",
   "contributors": [
     {
       "name": "Christopher Jeffrey"
@@ -32,7 +32,7 @@
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "wificoin-lib": "git://github.com/KunTengRom/wificoin-lib.git",
+    "wificoin-lib": "git://github.com/wificoin-project/wificoin-lib.git",
     "insight-api": "./lib/insight/insight-api",
     "insight-ui": "./lib/insight/insight-ui",
     "body-parser": "^1.13.3",
