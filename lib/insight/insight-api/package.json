@@ -61,7 +61,7 @@
   "bitcoreNode": "lib",
   "dependencies": {
     "async": "*",
-    "wificoin-lib": "git://github.com/KunTengRom/wificoin-lib.git",
+    "wificoin-lib": "git://github.com/wificoin-project/wificoin-lib.git",
     "bitcore-message": "./bitcore-message",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",

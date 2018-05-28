@@ -33,6 +33,6 @@ Note: For your convenience, we distribute wificoind binaries for x86_64 Linux an
 
 ## License
 
-Code released under [the MIT license](https://github.com/KunTengRom/wificoin-node/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/wificoin-project/wificoin-node/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc.
