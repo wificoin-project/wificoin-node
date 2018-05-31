@@ -1,10 +1,10 @@
 {
   "network": "livenet",
   "port": 3001,
-  "https": false,
+  "https": true,
   "httpsOptions": {
-    "key": "/opt/wificoin/cert/wfc.kunteng.org.key",
-    "cert": "/opt/wificoin/cert/wfc.kunteng.org.pem"
+    "key": "/opt/wificoin/cert/wfc.wificoin.club.key",
+    "cert": "/opt/wificoin/cert/wfc.wificoin.club.pem"
   },
   "services": [
     "wificoind",
