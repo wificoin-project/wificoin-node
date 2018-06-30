@@ -1,0 +1,46 @@
+[
+    {
+        "name": "getblockcount",
+        "params": [],
+        "returns": 123456
+    },
+	 {
+        "name": "getblockhash",
+        "params": [
+            123456
+        ],
+        "returns": "e2d8aa4b39a81464af9114d3deb2500274c40e3d41054d8f7850a5cf82c0a442"
+    },
+	 {
+        "name": "getblock",
+        "params": [
+            "e2d8aa4b39a81464af9114d3deb2500274c40e3d41054d8f7850a5cf82c0a442",
+            0
+        ],
+        "returns": {
+            
+        }
+    },
+	{
+        "name": "getbestblockhash",
+        "params": [""],
+        "returns": "e2d8aa4b39a81464af9114d3deb2500274c40e3d41054d8f7850a5cf82c0a442"
+    },
+    {
+        "name": "getbalance",
+        "params": [
+            "1111111"
+        ],
+        "returns": 0.0
+    },
+    {
+        "name": "getrawtransaction",
+        "params": [
+            "",
+            true
+        ],
+        "returns": {
+            
+        }
+    }
+]
