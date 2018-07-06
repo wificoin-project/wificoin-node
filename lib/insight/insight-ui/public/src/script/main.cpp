@@ -19,7 +19,7 @@ using namespace jsonrpc;
 unordered_map<string, double> addressList;
 boost::mutex addressMutex;
 
-static unsigned long block_height = 248290;
+static unsigned long block_height = 0;
 static bool stoped = false;
 
 bool findAddress(const std::string &address)
@@ -38,6 +38,7 @@ void parse_block_round(const unsigned long &blk_index, bool &error)
     wfcClient client(httpclient, JSONRPC_CLIENT_V1);
     try {
         std::string hash = client.getblockhash(blk_index);
+        cout << "block hash: " << hash << endl;
         Json::Value result = client.getblock(hash, 1);
         if (!result.isMember("tx") || !result["tx"].isArray()) {
             cout << ("block index: " + std::to_string(blk_index) + " hash: " + hash + " Bad block");
@@ -51,10 +52,14 @@ void parse_block_round(const unsigned long &blk_index, bool &error)
         cout << "blk_index: " << blk_index << "\t" << tx_size << endl;
         for (tx_i = 0; tx_i < tx_size; tx_i++) {
             std::string tx_hash = tx[tx_i].asString();
-            Json::Value txinfo = client.getrawtransaction(tx_hash, true);
+            Json::Value txinfo;
+            cout << tx_hash << endl;
+            // try{
+            txinfo = client.getrawtransaction(tx_hash, true);
+            //}catch(jsonrpc::JsonRpcException &e){
+            //	txinfo = client.gettransaction(tx_hash);
+            //}
 
-//            cout << tx_hash << "\t" << txinfo.toStyledString() << endl;
-#if 1
             if (txinfo.isMember("vout") && txinfo["vout"].isArray()) {
                 const Json::Value &vout = txinfo["vout"];
                 int vout_j, vout_size = vout.size();
@@ -76,10 +81,10 @@ void parse_block_round(const unsigned long &blk_index, bool &error)
                     }
                 }
             }
-#endif
         }
 
-    } catch (...) {
+    } catch (jsonrpc::JsonRpcException &e) {
+        cerr << __FUNCTION__ << ": " << e.GetMessage() << endl;
         return;
     }
     error = true;
