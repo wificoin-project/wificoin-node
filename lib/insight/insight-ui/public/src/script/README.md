@@ -34,7 +34,7 @@ cmake .. && make
 
 Note
 -----
-wificoin-qt.exe -listen -server=1 -gen -rest=0 -rpcuser=test -rpcpassword=admin -rpcport=9665 -rpcallowip=0.0.0.0/0 -txindex
+You can run as 'wificoin-qt.exe -listen -server=1 -gen -rest=0 -rpcuser=test -rpcpassword=admin -rpcport=9665 -rpcallowip=0.0.0.0/0 -txindex -reindex'
 
 Use -txindex to enable blockchain transaction queries. Use gettransaction for wallet transactions.
 By default 'getrawtransaction' only works for mempool transactions.
