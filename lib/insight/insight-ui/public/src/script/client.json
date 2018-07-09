@@ -1,17 +1,19 @@
 [
     {
         "name": "getblockcount",
-        "params": [],
+        "params": [
+            
+        ],
         "returns": 123456
     },
-	 {
+    {
         "name": "getblockhash",
         "params": [
             123456
         ],
         "returns": "e2d8aa4b39a81464af9114d3deb2500274c40e3d41054d8f7850a5cf82c0a442"
     },
-	 {
+    {
         "name": "getblock",
         "params": [
             "e2d8aa4b39a81464af9114d3deb2500274c40e3d41054d8f7850a5cf82c0a442",
@@ -21,23 +23,48 @@
             
         }
     },
-	{
+    {
         "name": "getbestblockhash",
-        "params": [""],
+        "params": [
+            ""
+        ],
         "returns": "e2d8aa4b39a81464af9114d3deb2500274c40e3d41054d8f7850a5cf82c0a442"
     },
     {
         "name": "getbalance",
         "params": [
-            "1111111"
+            "wWfmcZLr9FjQxZvWHYFDc2C3ezrSFSNLWs"
         ],
         "returns": 0.0
+    },
+    {
+        "name": "getaddressbalance",
+        "params": [
+            {
+                "addresses": [
+                    "wWfmcZLr9FjQxZvWHYFDc2C3ezrSFSNLWs"
+                ]
+            }
+        ],
+        "returns": {
+            "balance": 510400871500,
+            "received": 510400871500
+        }
     },
     {
         "name": "getrawtransaction",
         "params": [
             "",
             true
+        ],
+        "returns": {
+            
+        }
+    },
+    {
+        "name": "gettransaction",
+        "params": [
+            ""
         ],
         "returns": {
             

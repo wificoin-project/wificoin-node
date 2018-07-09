@@ -17,10 +17,46 @@ using namespace jsonrpc;
 #define WFC_RPC_SERVER "http://test:admin@192.168.2.119:9665"
 
 unordered_map<string, double> addressList;
-boost::mutex addressMutex;
 
-static unsigned long block_height = 0;
+boost::shared_mutex addressMutex;
+
+static unsigned long block_height = 1;
 static bool stoped = false;
+
+std::string print_money(std::string amount, unsigned int decimal_point = 8)
+{
+    if (decimal_point == (unsigned int)-1)
+        decimal_point = 8;
+
+    if (amount.size() < decimal_point + 1) {
+        amount.insert(0, decimal_point + 1 - amount.size(), '0');
+    }
+
+    if (decimal_point > 0)
+        amount.insert(amount.size() - decimal_point, ".");
+
+    // just discard '0' at end
+    std::size_t found;
+    found = amount.find(".");
+    if (found != std::string::npos) {
+        found = amount.find_last_not_of("0");
+        if (found != std::string::npos) {
+            amount.erase(found + 1);
+        } else {
+            // amount.clear();
+            amount = "0";
+        }
+    }
+
+    return amount;
+}
+
+std::string print_money(uint64_t amount, unsigned int decimal_point = 8)
+{
+    std::stringstream ss;
+    ss << amount;
+    return print_money(ss.str(), decimal_point);
+}
 
 bool findAddress(const std::string &address)
 {
@@ -53,12 +89,20 @@ void parse_block_round(const unsigned long &blk_index, bool &error)
         for (tx_i = 0; tx_i < tx_size; tx_i++) {
             std::string tx_hash = tx[tx_i].asString();
             Json::Value txinfo;
-            cout << tx_hash << endl;
-            // try{
-            txinfo = client.getrawtransaction(tx_hash, true);
-            //}catch(jsonrpc::JsonRpcException &e){
-            //	txinfo = client.gettransaction(tx_hash);
-            //}
+
+            try {
+                txinfo = client.getrawtransaction(tx_hash, true);
+            } catch (jsonrpc::JsonRpcException &e) {
+                cout << "getrawtransaction: " << tx_hash << e.GetMessage() << endl;
+                continue;
+#if 0
+				 try{
+					 txinfo = client.gettransaction(tx_hash);
+					  }catch(jsonrpc::JsonRpcException &e){
+						  cout << "gettransaction: " << tx_hash << e.GetMessage() << endl;
+					  }
+#endif
+            }
 
             if (txinfo.isMember("vout") && txinfo["vout"].isArray()) {
                 const Json::Value &vout = txinfo["vout"];
@@ -75,7 +119,7 @@ void parse_block_round(const unsigned long &blk_index, bool &error)
                         std::string address = addr[idx].asString();
                         cout << address << endl;
                         if (!findAddress(address)) {
-                            mutex::scoped_lock lock(addressMutex);
+                            boost::unique_lock<boost::shared_mutex> lock(addressMutex);
                             addressList.insert(std::pair<string, double>(address, 0));
                         }
                     }
@@ -130,6 +174,9 @@ void thread_detect_address()
                         cerr << "parse_block_round failed: block: " << blk_height[j] << endl;
                     }
                 }
+                if (blk_index % 1000 == 0) {
+                    sleep(1);
+                }
             }
 
         } else {
@@ -157,27 +204,36 @@ void thread_detect_address_balance()
     wfcClient client(httpclient, JSONRPC_CLIENT_V1);
     while (!stoped) {
         boost::this_thread::sleep(boost::posix_time::seconds(10));
-        mutex::scoped_lock lock(addressMutex);
+        boost::shared_lock<boost::shared_mutex> lock(addressMutex);
         Json::Value data;
         data["runtime"] = Json::UInt64(time(NULL));
         Json::Value amounts;
         for (auto &address : addressList) {
-            Json::Value item;
             address.second = 0;
             try {
-                Json::Value result = client.getbalance(address.first);
-                cout << __FUNCTION__ << ":" << address.first << "\t" << result.toStyledString() << endl;
+                Json::Value req;
+                Json::Value addr;
+                addr.append(address.first);
+                req["addresses"] = addr;
+                // cout << req << endl;
+                Json::Value result;
+                result = client.getaddressbalance(req);
+                if (result.isMember("balance") && result["balance"].isNumeric()) {
+                    address.second = strtold(print_money(result["balance"].asUInt64()).c_str(), nullptr);
+                }
+                cout << __FUNCTION__ << ":" << address.first << "\t" << address.second << endl;
             } catch (JsonRpcException &e) {
-                cout << "getbalance: " << address.first << "failed: " << e.GetMessage() << endl;
+                cout << "getaddressbalance: " << address.first << " failed: " << e.GetMessage() << endl;
             }
 
+            Json::Value item;
             item["address"] = address.first;
             item["balance"] = address.second;
             amounts.append(item);
         }
         data["list"] = amounts;
         cout << __FUNCTION__ << endl;
-        cout << data.toStyledString() << endl;
+        // cout << data.toStyledString() << endl;
 
         ofstream ofs;
         ofs.open("wfc_rich_list.json");
@@ -188,6 +244,8 @@ void thread_detect_address_balance()
 
 int main(int argc, char *argv[])
 {
+    // addressList["wbGexNMs1SCut68CNV1HQzUpVYyL4RPjkf"] = 0;
+
     boost::thread t1(thread_detect_address);
     boost::thread t2(thread_detect_address_balance);
 
