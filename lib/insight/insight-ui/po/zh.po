@@ -535,6 +535,13 @@ msgstr "前100名富豪排行榜"
 msgid "by date.On"
 msgstr "时间截止至"
 
+
+#~ msgid "Wallet"
+#~ msgstr "钱包"
+
+#~ msgid "Donate"
+#~ msgstr "捐赠"
+
 #~ msgid "Forbes"
 #~ msgstr "富豪榜"
 
