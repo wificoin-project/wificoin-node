@@ -21,8 +21,14 @@ Note: For your convenience, we distribute wificoind binaries for x86_64 Linux an
 - GNU/Linux x86_32/x86_64, or OSX 64bit *(for wificoind distributed binaries)*
 - Node.js v0.10, v0.12 or v4
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
-- ~200GB of disk storage
+- ~20GB of disk storage
 - ~8GB of RAM
+#### How to install libzmq3-dev on Ubuntu 12.04
+```bash
+$ sudo add-apt-repository ppa:chris-lea/zeromq
+$ sudo apt-get update
+$ sudo apt-get install libzmq3-dbg libzmq3-dev libzmq3
+```
 
 ## Documentation
 
